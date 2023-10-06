@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Listening Ports:"
+netstat -tuln | awk '$6 == "LISTEN" {print $4}' | cut -d: -f2
